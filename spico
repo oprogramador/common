@@ -1,0 +1,16 @@
+dir="/home/pierre/pierre_copy/undo"
+mkdir -p $dir &&
+(
+	for i in "$@"
+	do
+		touch $i
+		cp $i $dir/$(date +'%Y-%m-%d_%H-%M-%S')_@$(cut256 $(realpath $i | sed 's/\//___/g'))
+	done
+) &&
+vim -p "$@" &&
+(
+	for i in "$@"
+	do
+		cp $i $dir/$(date +'%Y-%m-%d_%H-%M-%S')_@$(cut256 $(realpath $i | sed 's/\//___/g'))
+	done
+)
