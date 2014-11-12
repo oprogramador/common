@@ -5,6 +5,12 @@ if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
 
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml,*.twig"
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -20,6 +26,11 @@ let NERDTreeMapOpenInTab='<F12>'
 ":inoremap ( ()<Esc>i
 ":inoremap [ []<Esc>i
 ":inoremap {<CR> {<Esc>:call Curly()<CR>i
+:inoremap <c-up> 8<up>
+:inoremap <c-down> 8<down>
+:inoremap <c-left> 8<left>
+:inoremap <c-right> 8<right>
+
 :map <F2> :w<CR>
 :map <F3> ui
 :map <F4> <C-R>i
@@ -32,7 +43,10 @@ let NERDTreeMapOpenInTab='<F12>'
 :map ay :%y+<CR>
 :map ad :%d+<CR>
 :map t <CR>:Tab %<CR>
-
+:map <c-up> 8<up>
+:map <c-down> 8<down>
+:map <c-left> 8<left>
+:map <c-right> 8<right>
 
 :setlocal omnifunc=javacomplete#Complete 
 
