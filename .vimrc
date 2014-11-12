@@ -20,8 +20,8 @@ let NERDTreeMapOpenInTab='<F12>'
 inoremap <F2> <Esc>:w<CR>i
 inoremap <F3> <Esc>ui
 inoremap <F4> <Esc><C-R>i
-inoremap <C-U> <Esc>Pi
-inoremap <C-I> <Esc>pi
+inoremap <C-Y> <Esc>Pi
+inoremap <C-U> <Esc>pi
 inoremap <C-D> <Esc>ddi
 "inoremap ( ()<Esc>i
 "inoremap [ []<Esc>i
