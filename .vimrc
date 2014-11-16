@@ -48,6 +48,7 @@ map <c-up> 8<up>
 map <c-down> 8<down>
 map <c-left> 8<left>
 map <c-right> 8<right>
+map <c-d> daw
 
 setlocal omnifunc=javacomplete#Complete 
 
