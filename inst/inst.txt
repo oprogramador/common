@@ -21,7 +21,9 @@ php5-cli
 python-opengl
 python-qt4
 qtcreator
+rhino
 skype
+subversion
 texlive-full
 traceroute
 unetbootin

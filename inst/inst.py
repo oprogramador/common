@@ -16,6 +16,7 @@ try:
 	oper("inst_first.txt", "inst.sh")
 	oper("tocopy.txt", "tocopy.sh")
 	os.system("echo '44 * * * * backup.sh' >> /var/spool/cron/crontabs/root")
+	os.system("echo '00 * * * * copy_backup.sh' >> /var/spool/cron/crontabs/root")
 	print("\n\ncopied\ncopied\ncopied\n\n\n")
 	oper("inst.txt", "inst.sh")
 	
