@@ -11,6 +11,18 @@ set softtabstop=4
 
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml,*.twig"
 
+
+
+let g:ftp_conf = {
+\ 'local_base_path' : '/home/pierre/ftp-client/',
+\ 'remote_base_path' : '/home/pierre/ftp-server/',
+\ 'user' : 'pierre',
+\ 'pass' : 'password',
+\ 'host' : '127.0.0.1',
+\ 'silent' : 1
+\ }
+
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -38,6 +50,7 @@ map <F4> <C-R>i
 map <F5> i<End><CR><Esc>
 map <F7> gT
 map <F8> gt
+map <F9> :tabfirst<CR><c-w><left>
 map ll "_ddP
 map lk "_dP
 map de "_dd
