@@ -9,17 +9,18 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml,*.twig"
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml,*.twig,*.php"
 
 
 
 let g:ftp_conf = {
 \ 'local_base_path' : '/home/pierre/ftp-client/',
 \ 'remote_base_path' : '/home/pierre/ftp-server/',
+\ 'local_backup_path' : '/home/pierre/undo/',
 \ 'user' : 'pierre',
 \ 'pass' : 'password',
 \ 'host' : '127.0.0.1',
-\ 'silent' : 1
+\ 'silent' : 0
 \ }
 
 
@@ -35,9 +36,6 @@ inoremap <F4> <Esc><C-R>i
 inoremap <C-Y> <Esc>Pi
 inoremap <C-U> <Esc>pi
 inoremap <C-D> <Esc>ddi
-"inoremap ( ()<Esc>i
-"inoremap [ []<Esc>i
-"inoremap {<CR> {<Esc>:call Curly()<CR>i
 inoremap <c-up> <C-o>8i<up><Esc>
 inoremap <c-down> <C-o>8i<down><Esc>
 inoremap <c-left> <C-o>8i<left><Esc>
@@ -74,53 +72,3 @@ function RandChar()
 endfunction 
 
 command! -nargs=0 RandChar :normal i call Tab('<args>')
-
-
-function Curly()
-	let line = getline('.')
-	let tabsnr = 0
-	let i = 0
-	while i<len(line)
-		if line[i] != '\t'
-			break
-		endif
-		let tabsnr += 1
-		let i += 1
-	endwhile
-	exec 'put="ewgewgewgewgewgewgewgew"'
-	exec 'put="' . repeat('\t', tabsnr+1) . '"'
-	exec 'put="' . repeat('\t', tabsnr) . '}"'
-endfunction
-
-
-function Tab(name)
-	echo system('spi.sh ' . a:name)
-	exec "tabedit " . a:name
-endfunction
-
-command! -nargs=1 -complete=file Tab call Tab('<args>')
-
-function CloseAll()
-	redir => message
-  	silent execute "tabs"
-  	redir END
-	let messages = split(message,'\n')
-	for i in messages
-		if i !~ '^Tab'
-			echo system('spi.sh ' . i[4:])
-		endif
-	endfor
-	exec "qa"
-endfunction
-
-command! -nargs=0 CloseAll call CloseAll()
-
-function Close()
-	redir => message
-  	silent execute "echo @%"
-  	redir END
-	echo system('spi.sh ' . message[1:])
-	exec "q"
-endfunction
-
-command! -nargs=0 Close call Close()
