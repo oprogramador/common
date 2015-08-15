@@ -29,6 +29,7 @@ syntax on
 filetype plugin indent on
 
 let NERDTreeMapOpenInTab='<F12>'
+let g:NERDTreeDirArrows=0
 
 inoremap <F2> <Esc>:w<CR>i
 inoremap <F3> <Esc>ui
