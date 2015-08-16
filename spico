@@ -1,4 +1,4 @@
-dir="/home/pierre/undo"
+dir="/home/pierre/pierre_copy/undo"
 mkdir -p $dir &&
 (
 	for i in "$@"

@@ -16,7 +16,7 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml,*.twig,*.php"
 let g:ftp_conf = {
 \ 'local_base_path' : '/home/pierre/ftp-client/',
 \ 'remote_base_path' : '/home/pierre/ftp-server/',
-\ 'local_backup_path' : '/home/pierre/undo/',
+\ 'local_backup_path' : '/home/pierre/pierre_copy/undo/',
 \ 'user' : 'pierre',
 \ 'pass' : 'password',
 \ 'host' : '127.0.0.1',
