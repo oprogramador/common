@@ -5,9 +5,12 @@ if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
 
-set expandtab
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
+set ts=4 sw=4 expandtab
+
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+
 
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml,*.twig,*.php"
 
