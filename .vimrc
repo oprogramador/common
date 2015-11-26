@@ -11,6 +11,8 @@ set ts=4 sw=4 expandtab
 
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 
+au BufRead,BufNewFile *.plez set filetype=plezuro
+autocmd Filetype plezuro set syntax=plezuro
 
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.xml,*.twig,*.php"
 
