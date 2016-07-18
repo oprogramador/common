@@ -9,6 +9,8 @@ set shiftwidth=2
 set softtabstop=2
 set ts=4 sw=4 expandtab
 
+set binary
+
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 
 au BufRead,BufNewFile *.plez set filetype=plezuro
