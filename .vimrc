@@ -5,13 +5,15 @@ if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
 
+set binary
+
 set shiftwidth=2
 set softtabstop=2
 set ts=4 sw=4 expandtab
 
-set binary
 
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 
 au BufRead,BufNewFile *.plez set filetype=plezuro
 autocmd Filetype plezuro set syntax=plezuro
@@ -38,7 +40,7 @@ filetype plugin indent on
 let NERDTreeMapOpenInTab='<F12>'
 let g:NERDTreeDirArrows=0
 
-inoremap <F2> <Esc>:w<CR>i
+inoremap <F2> <Esc>:w<CR>
 inoremap <F3> <Esc>ui
 inoremap <F4> <Esc><C-R>i
 inoremap <C-Y> <Esc>Pi
