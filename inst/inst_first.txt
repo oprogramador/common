@@ -1,6 +1,5 @@
 vim
 wine
 realpath
-grive
 git
 curl
