@@ -30,13 +30,14 @@ toInstallNext=(
   #skype
   texlive-full
   traceroute
-  #unetbootin
+  unetbootin
   virtualbox
   virtualbox-dkms
   xdotool
 )
 
 #sudo add-apt-repository multiverse
+sudo add-apt-repository ppa:gezakovacs/ppa
 sudo apt-get update
 for package in "${toInstallFirst[@]}"
 do
