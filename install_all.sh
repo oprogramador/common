@@ -25,6 +25,7 @@ toInstallNext=(
   gparted
   mongodb-clients
   mysql-client
+  mongodb-server-core
   mysql-server
   #skype
   texlive-full
@@ -58,6 +59,8 @@ sudo cp spi.sh /usr/bin
 sudo cp dir_backup.sh /usr/bin
 cp .vimrc ~
 cat .bashrc >> ~/.bashrc
+
+sudo mkdir -p /data/db
 
 for package in "${toInstallNext[@]}"
 do
