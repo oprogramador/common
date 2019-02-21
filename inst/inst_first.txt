@@ -1,5 +1,0 @@
-vim
-wine
-realpath
-git
-curl

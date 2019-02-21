@@ -1,5 +1,0 @@
-/home/pierre/pierre_copy/programming/common/backup.sh /usr/bin
-/home/pierre/pierre_copy/programming/common/cut256 /usr/bin
-/home/pierre/pierre_copy/programming/common/spico /usr/bin
-/home/pierre/pierre_copy/programming/common/spi.sh /usr/bin
-/home/pierre/pierre_copy/programming/common/.vimrc /home/pierre

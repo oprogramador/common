@@ -1,3 +1,5 @@
+#!/bin/bash
+
 dir="/home/pierre/pierre_copy/undo"
 mkdir -p $dir &&
 (

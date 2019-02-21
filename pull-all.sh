@@ -7,23 +7,23 @@ NC='\033[0m'
 
 for repo in `find -name .git`
 do
-    printf "\n\n\n"
-    echo $repo
-    cd $repo/../
-    if [[ ! -z `git remote -v | head -1` ]]
+  printf "\n\n\n"
+  echo $repo
+  cd $repo/../
+  if [[ ! -z `git remote -v | head -1` ]]
+  then
+    git add .
+    git stash
+    git checkout master
+    git fetch --all
+    if [[ -z `git remote -v | grep '^origin\s'` ]] && [[ ! -z `git remote -v | grep '^heroku\s' | head -1` ]]
     then
-        git add .
-        git stash
-        git checkout master
-        git fetch --all
-        if [[ -z `git remote -v | grep '^origin\s'` ]] && [[ ! -z `git remote -v | grep '^heroku\s' | head -1` ]]
-        then
-            git merge heroku/master --no-edit
-        else
-            git merge origin/master --no-edit
-        fi
+      git merge heroku/master --no-edit
     else
-        echo -e "${YELLOW}no remote for $repo${NC}"
+      git merge origin/master --no-edit
     fi
-    cd -
+  else
+    echo -e "${YELLOW}no remote for $repo${NC}"
+  fi
+  cd -
 done

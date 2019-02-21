@@ -1,3 +1,5 @@
+#!/bin/bash
+
 str=$1
 n=100
 len=${#str}
