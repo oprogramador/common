@@ -59,6 +59,9 @@ sudo cp cut256 /usr/bin
 sudo cp spico /usr/bin
 sudo cp spi.sh /usr/bin
 sudo cp dir_backup.sh /usr/bin
+cat copy_backup.sh | sed "s/__ZIP_E_BACKUP_PASS__/$ZIP_E_BACKUP_PASS/g" > copy_backup_with_pass
+sudo cp copy_backup_with_pass /usr/bin/copy_backup.sh
+rm copy_backup_with_pass
 cp .vimrc ~
 cat .bashrc >> ~/.bashrc
 git clone https://github.com/jimeh/git-aware-prompt.git ~/.bash/git-aware-prompt || echo 'git-aware-prompt already installed'
