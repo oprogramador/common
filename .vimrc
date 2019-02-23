@@ -9,7 +9,7 @@ set binary
 
 set shiftwidth=2
 set softtabstop=2
-set ts=4 sw=4 expandtab
+set ts=2 sw=2 expandtab
 
 
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
