@@ -23,6 +23,7 @@ toInstallNext=(
   flashplugin-installer
   g++
   gparted
+  htop
   mongodb-clients
   mysql-client
   mongodb-server-core
@@ -60,6 +61,9 @@ sudo cp spi.sh /usr/bin
 sudo cp dir_backup.sh /usr/bin
 cp .vimrc ~
 cat .bashrc >> ~/.bashrc
+git clone https://github.com/jimeh/git-aware-prompt.git ~/.bash/git-aware-prompt || echo 'git-aware-prompt already installed'
+rm -rf ~/.config/fish
+cp -r fish ~/.config/fish
 
 sudo mkdir -p /data/db
 
