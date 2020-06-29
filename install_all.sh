@@ -14,7 +14,7 @@ toInstallFirst=(
 toInstallNext=(
   audacity
   blender
-  camorama
+  #camorama
   cheese
   chromium-browser
   docker
@@ -22,6 +22,7 @@ toInstallNext=(
   firefox
   flashplugin-installer
   g++
+  golang
   gparted
   htop
   mongodb-clients
@@ -42,6 +43,7 @@ sudo add-apt-repository ppa:gezakovacs/ppa
 sudo apt-get update
 for package in "${toInstallFirst[@]}"
 do
+  printf "\n\n\n\n$package to be installed\n"
   sudo apt-get install -y $package
 done
 
@@ -53,7 +55,9 @@ git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcomm
 
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1 || echo 'git prompt already installed'
 
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash | echo 'nvm already installed'
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash | echo 'nvm already installed'
+nvm i 12
+npm i -g yarn
 
 sudo cp cut256 /usr/bin
 sudo cp spico /usr/bin
@@ -72,5 +76,6 @@ sudo mkdir -p /data/db
 
 for package in "${toInstallNext[@]}"
 do
+  printf "\n\n\n\n$package to be installed\n"
   sudo apt-get install -y $package
 done
