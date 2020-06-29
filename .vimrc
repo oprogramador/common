@@ -14,6 +14,7 @@ set ts=2 sw=2 expandtab
 
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 au BufRead,BufNewFile *.plez set filetype=plezuro
 autocmd Filetype plezuro set syntax=plezuro
