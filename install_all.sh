@@ -59,6 +59,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash 
 nvm i 12
 npm i -g yarn
 
+cp _gitignore ~/.gitignore
 sudo cp cut256 /usr/bin
 sudo cp spico /usr/bin
 sudo cp spi.sh /usr/bin
