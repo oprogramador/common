@@ -60,6 +60,8 @@ nvm i 12
 npm i -g yarn
 
 cp _gitignore ~/.gitignore
+git config --global core.excludesfile ~/.gitignore
+git config --global credential.helper 'cache --timeout=57600'
 sudo cp cut256 /usr/bin
 sudo cp spico /usr/bin
 sudo cp spi.sh /usr/bin
