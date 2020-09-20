@@ -29,6 +29,7 @@ toInstallNext=(
   mysql-client
   mongodb-server-core
   mysql-server
+  redis
   #skype
   texlive-full
   traceroute
