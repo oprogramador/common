@@ -53,6 +53,7 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim || echo 'pat
 git clone https://github.com/oprogramador/vim-ftp.git ~/.vim/bundle/vim-ftp || echo 'vim-ftp already installed'
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree || echo 'nerdtree already installed'
 git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter || echo 'nerdcommenter already installed'
+git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter || echo 'vim-gitgutter already installed'
 
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1 || echo 'git prompt already installed'
 
