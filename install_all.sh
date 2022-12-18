@@ -5,7 +5,7 @@ cd `dirname $0`
 toInstallFirst=(
   vim
   vim-gtk
-  wine-stable
+  #wine-stable
   git
   curl
   fish
@@ -33,14 +33,14 @@ toInstallNext=(
   #skype
   texlive-full
   traceroute
-  unetbootin
-  virtualbox
-  virtualbox-dkms
-  xdotool
+  #unetbootin
+  #virtualbox
+  #virtualbox-dkms
+  #xdotool
 )
 
 #sudo add-apt-repository multiverse
-sudo add-apt-repository ppa:gezakovacs/ppa
+#sudo add-apt-repository ppa:gezakovacs/ppa
 sudo apt-get update
 for package in "${toInstallFirst[@]}"
 do
@@ -57,9 +57,9 @@ git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgut
 
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1 || echo 'git prompt already installed'
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash | echo 'nvm already installed'
-nvm i 12
-npm i -g yarn
+#curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash | echo 'nvm already installed'
+#nvm i 16
+#npm i -g yarn
 
 cp _gitignore ~/.gitignore
 git config --global core.excludesfile ~/.gitignore
