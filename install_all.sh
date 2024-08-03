@@ -4,7 +4,7 @@ cd `dirname $0`
 
 toInstallFirst=(
   vim
-  vim-gtk
+  vim-gtk3
   #wine-stable
   git
   curl
@@ -16,19 +16,19 @@ toInstallNext=(
   blender
   #camorama
   cheese
-  chromium-browser
-  docker
-  docker.io
+  #chromium-browser
+  #docker
+  #docker.io
   firefox
-  flashplugin-installer
+  #flashplugin-installer
   g++
   golang
   gparted
   htop
-  mongodb-clients
-  mysql-client
-  mongodb-server-core
-  mysql-server
+  #mongodb-clients
+  #mysql-client
+  #mongodb-server-core
+  #mysql-server
   redis
   #skype
   texlive-full
