@@ -6,11 +6,11 @@
 # - Git branch and dirty state (if inside a git repo)
 
 function _git_branch_name
-  echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+  echo (command git symbolic-ref HEAD | sed -e 's|^refs/heads/||')
 end
 
 function _git_is_dirty
-  echo (command git status -s --ignore-submodules=dirty ^/dev/null)
+  echo (command git status -s --ignore-submodules=dirty)
 end
 
 function _remote_hostname
