@@ -78,6 +78,9 @@ git clone https://github.com/jimeh/git-aware-prompt.git ~/.bash/git-aware-prompt
 rm -rf ~/.config/fish
 cp -r fish ~/.config/fish
 
+# disable mouse/touchpad middle button:
+echo 'pointer = 1 6 3 4 5 2' > ~/.Xmodmap
+
 sudo mkdir -p /data/db
 
 for package in "${toInstallNext[@]}"
